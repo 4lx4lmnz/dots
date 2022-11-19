@@ -52,7 +52,7 @@ __dots_init()
         # 2. Remove the empty install_dir base directory so we can move the
         #    cloned_dir into its place instead of inside of it
         mkdir -p "$install_dir"
-        rm -rf "$install_dir"
+        rmdir "$install_dir"
         mv -f  "$cloned_dir" "$install_dir"
 
         # Get out of the empty directory if we were in it
